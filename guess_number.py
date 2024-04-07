@@ -1,14 +1,22 @@
-# Импорт функции получения случайных чисел
-# из модуля random.
 from random import randint
-pc_num = randint(1, 10)
-print('Write the number in 1-100 daipazone')
+
+# Получаем случайное число в диапазоне от 1 до 100.
+number = randint(1, 100)
+print('Угадайте число от 1 до 100')
+
 while True:
-    guess = int(input('Enter your Number:'))
-    if guess < pc_num:
-        print('your num smaller')
-    if guess > pc_num:
-        print('your num bigger')
-    if guess == pc_num:
+    # Получаем число от пользователя и сохраняем его в переменную.
+    guess = int(input('Введите число: '))
+
+    # Если число меньше загаданного...
+    if guess < number:
+        # ...выводим сообщение.
+        print('Ваше число меньше того, что загадано.')
+    elif guess > number:
+        # ...выводим сообщение.
+        print('Ваше число больше того, что загадано.')
+    elif guess == number:
+        # ...прерываем выполнение программы и...
         break
-print('Congratulatins')             
+# ...выводим сообщение.
+print('Отличная интуиция! Вы угадали число :)') 
